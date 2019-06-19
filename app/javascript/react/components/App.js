@@ -1,7 +1,10 @@
 import React from 'react'
-
+import CharacterSelect from './CharacterSelect'
+import GameSelect from './GameSelect'
 export const App = (props) => {
-  return (<h1>Make It So React</h1>)
+  return (
+    <GameSelect/>
+  )
 }
 
 export default App
