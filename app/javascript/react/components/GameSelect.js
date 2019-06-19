@@ -4,12 +4,12 @@ class GameSelect extends React.Component {
   constructor(props){
     super(props);
     this.state ={
-      game:{}
+      game:''
     }
   }
 
   componentDidMount(){
-    let game_id = 1
+    let game_id = 
     fetch(`/api/v1/games/${game_id}`)
     .then(response => {
       if (response.ok) {
@@ -23,6 +23,7 @@ class GameSelect extends React.Component {
     .then(response => response.json())
     .then(body => {
       this.setState({game: body.game})
+      console.log(body.game)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
