@@ -1,7 +1,9 @@
 <div class="box">
   <% @games.each do |game| %>
+  <div class="text">
     <p>
       <%=link_to game.name, game_path(game)%>
     </p>
+  </div>
   <% end %>
 </div>
