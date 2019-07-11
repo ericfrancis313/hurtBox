@@ -9,8 +9,9 @@ body{
     background: #ffffff;
     height: 100%;
     opacity: 0.92;
-    position:fixed;
-    width: 50%;
+    position: fixed;
+    width: 80%;
+    left: 10%;
     margin: auto;
 
 }
