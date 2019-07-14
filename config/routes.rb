@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :games, only: [:index,:show]
-  resources :characters, only: [:index, :show]
+  resources :characters, only: [:index,:show]
 
   namespace :api do
     namespace :v1 do
