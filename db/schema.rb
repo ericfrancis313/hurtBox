@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_12_030729) do
+ActiveRecord::Schema.define(version: 2019_07_17_023155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,13 @@ ActiveRecord::Schema.define(version: 2019_07_12_030729) do
     t.bigint "character_id"
     t.index ["character_id"], name: "index_variations_on_character_id"
     t.index ["game_id"], name: "index_variations_on_game_id"
+  end
+
+  create_table "vocabularies", force: :cascade do |t|
+    t.string "word", null: false
+    t.string "definition", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
