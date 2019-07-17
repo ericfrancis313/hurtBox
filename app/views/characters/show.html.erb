@@ -1,0 +1,10 @@
+<div class="box">
+  <div class="text">
+    <h1><%= @character.name %></h1>
+    <h3>Move List</h3>
+      <% @character.moves.each do |move| %>
+      <p> <%= move.name %> </p>
+      <p> <%= move.input %> </p>
+      <% end %>
+  </div>
+</div>
