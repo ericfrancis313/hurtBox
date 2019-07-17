@@ -5,8 +5,7 @@ class MovesController < ApplicationController
   end
 
   def show
-    @move = Move.find(params[:id])
-    
+    @move = Move.find(params[:id])  
   end
 
 end

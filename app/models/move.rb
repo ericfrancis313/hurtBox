@@ -3,5 +3,5 @@ class Move < ApplicationRecord
   validates :name, presence:true
   validates :input, presence:true
 
-  belongs_to:variation
+  belongs_to :variation
 end

@@ -6,6 +6,6 @@ class VariationsController < ApplicationController
 
   def show
     @variation = Variation.find(params[:id])
-    @move = Variation.move
+    @move = Move.find(params[:id])
   end
 end
