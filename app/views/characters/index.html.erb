@@ -1,0 +1,9 @@
+<div class="box">
+  <% @characters.each do |character| %>
+  <div class="text">
+    <p>
+      <%=link_to character.name, character_path(character)%>
+    </p>
+  </div>
+  <% end %>
+</div>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :games, only: [:index, :show]
   resources :characters, only: [:index, :show]
+  resources :vocabularies, only: [:index, :show]
 
   namespace :api do
     namespace :v1 do
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
           resources :moves , only: [:show]
         end
       end
+      resources :vocabularies, only: [:show]
     end
   end
 end

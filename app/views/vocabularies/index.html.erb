@@ -1,0 +1,9 @@
+<div class="box">
+  <% @vocabularies.each do |vocabulary| %>
+  <div class="text">
+    <p>
+      <%=link_to vocabulary.word, vocabulary_path(vocabulary)%>
+    </p>
+  </div>
+  <% end %>
+</div>
