@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
 
-  resources :games, only: [:index, :show]
+  resources :games, only: [:index, :show, :new, :create]
   resources :characters, only: [:index, :show]
   resources :vocabularies, only: [:index, :show]
 
