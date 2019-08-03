@@ -1,0 +1,19 @@
+<div class="box">
+  <div class="text">
+    <h1>Add Fighter!</h1>
+        <select class="" name="">
+          <% @games.each do |game|  %>
+            <option value=> <%= game.name %> </option>
+          <% end  %>
+        </select>
+
+        <%= form_for(@character) do |f| %>
+        Name: <%= f.text_field :name %>
+        <%= f.submit "Submit Character" %>
+        <% end %>
+
+
+
+
+    </div>
+</div>

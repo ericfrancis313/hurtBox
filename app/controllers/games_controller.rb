@@ -2,12 +2,13 @@ class GamesController < ApplicationController
 
   def index
     @games = Game.all
+    @character = Character.all
   end
 
 
   def show
     @game = Game.find(params[:id])
-    @characters = @game.characters
+    @characters = Game.find(params[:id]).characters
   end
 
   def new
