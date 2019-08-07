@@ -1,20 +1,21 @@
 import React, {Components} from 'react'
-import TextField from './TextField'
+
 
 class Form extends Component {
   constructor(props){
     super(props)
     this.state = {
-
+      CharacterName: '',
+      MoveName:'',
+      MoveInput:''
     }
-
-    render(){
-      return(
-        <div>I am the form
-          <TextField/>
-        </div>
-      )
-
-    }
-
+  }
+  render(){
+    return(
+      <div>
+        <h3> Create New Fighter!</h3>
+      </div>
+    )
+  }
 }
+export default Form

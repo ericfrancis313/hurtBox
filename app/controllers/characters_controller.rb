@@ -5,13 +5,13 @@ class CharactersController < ApplicationController
 
   def show
     @character = Character.find(params[:id])
-    @variation = Variation.find(params[:id])
     @move = Move.find(params[:id])
   end
 
   def new
     @character=Character.new
     @games=Game.all
+    @moves=@character.moves
   end
 
   def create
@@ -28,6 +28,7 @@ class CharactersController < ApplicationController
   private
   def character_params
     params.require(:character).permit(:name)
-    
+    params.require(:character).permit(:move)
+
   end
 end

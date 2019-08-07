@@ -4,10 +4,7 @@
     <h1><%= @game.name %></h1>
     <h3>Select your fighter!</h3>
       <% @characters.each do |character| %>
-          <p class ="hyperText"> <%=  link_to character.name, character_path(character) %></p>
+          <p class ="hyperText"> <%=  link_to character.name, character_path(character)%> </p>
       <% end %>
-
-      <h4>Add Fighter</h4>
-        
   </div>
 </div>
