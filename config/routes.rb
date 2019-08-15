@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :games, only: [:index, :show, :new, :create]
   resources :characters, only: [:index, :show, :new, :create]
   resources :vocabularies, only: [:index, :show]
+  resources :vocabtest, only: [:index]
 
   namespace :api do
     namespace :v1 do

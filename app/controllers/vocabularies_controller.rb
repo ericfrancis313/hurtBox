@@ -8,4 +8,8 @@ class VocabulariesController < ApplicationController
     @vocabulary = Vocabulary.find(params[:id])
   end
 
+  def test
+    @vocabularies = Vocabulary.all
+  end
+
 end
