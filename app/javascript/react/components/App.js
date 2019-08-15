@@ -1,7 +1,12 @@
 import React from 'react'
+import Form from './Form'
+
+
 export const App = (props) => {
   return (
-<div></div>
+    <div>
+      <h1>boop</h1>
+    </div>
   )
 }
 
