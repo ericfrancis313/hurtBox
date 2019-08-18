@@ -1,13 +1,11 @@
-import React, {Components} from 'react'
+import React,{Component} from 'react'
 
 
 class Form extends Component {
   constructor(props){
     super(props)
     this.state = {
-      CharacterName: '',
-      MoveName:'',
-      MoveInput:''
+
     }
   }
   render(){

@@ -1,13 +1,23 @@
-import React from 'react'
+import React, {Component} from 'react'
 import Form from './Form'
+import QuestionContainer from './QuestionContainer'
 
 
-export const App = (props) => {
-  return (
-    <div>
-      <h1>boop</h1>
-    </div>
-  )
+class App extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+    render(){
+
+      return(
+      <div className="box">
+        <div className="text">
+          <h1>VOCAB TEST</h1>
+          <QuestionContainer/>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default App

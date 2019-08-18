@@ -8,5 +8,4 @@ class Api::V1::VocabulariesController < ApplicationController
     response = {vocabulary:@vocabulary}
     render json:response
   end
-
 end
