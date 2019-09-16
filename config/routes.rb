@@ -14,7 +14,7 @@ Rails.application.routes.draw do
           resources :moves , only: [:show]
         end
       end
-      resources :vocabularies, only: [:show,:index]
+      resources :vocabularies, only: [:show, :index]
     end
   end
 end

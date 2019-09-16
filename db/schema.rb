@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2019_07_17_023155) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "move_lists", force: :cascade do |t|
+    t.bigint "characters_id"
+    t.string "name", null: false
+    t.string "input", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["characters_id"], name: "index_move_lists_on_characters_id"
+  end
+
   create_table "moves", force: :cascade do |t|
     t.bigint "variation_id"
     t.string "name", null: false
