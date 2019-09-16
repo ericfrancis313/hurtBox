@@ -1,6 +1,7 @@
 class Api::V1::VocabulariesController < ApplicationController
   def index
     @vocabularies = Vocabulary.all
+    render json: Vocabulary.all
   end
 
   def show
