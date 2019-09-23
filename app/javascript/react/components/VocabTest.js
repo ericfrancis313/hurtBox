@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-
+import AnswerContainer from './AnswerContainer'
 
 class QuestionContainer extends Component{
   constructor(props){
@@ -30,17 +30,18 @@ class QuestionContainer extends Component{
        vocabWord = body[Math.floor(Math.random()*body.length)]
           let word = vocabWord.word
           let definition = vocabWord.definition
+          let id = vocabWord.id
       }
-        vocabList.push(vocabWord.definition)
+        vocabList.push(vocabWord)
       while(vocabList.length < 4) {
-        let definitions = body[Math.floor(Math.random()*body.length)].definition
+        let definitions = body[Math.floor(Math.random()*body.length)]
         if(vocabList.includes(definitions)== false){
           vocabList.push(definitions)
         }
       }
 
-      var shuffle = function (array) {
 
+      var shuffle = function (array) {
         var currentIndex = array.length;
         var temporaryValue, randomIndex;
         while (0 !== currentIndex) {
@@ -53,31 +54,30 @@ class QuestionContainer extends Component{
       return array;
       };
 
-      console.log(shuffle(vocabList))
       this.setState({
         word:vocabWord.word,
-        definition:vocabWord.definition,
+        definition:vocabWord.id,
         herrings: this.state.herrings.concat(vocabList)
       })
-      console.log(this.state.herrings)
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
   render(){
-  let definitions = this.state.herrings.map((definiton) =>
+    console.log(this.state)
+  let definitions = this.state.herrings.map((definiton,key) =>
     <p>{definiton}</p>
   )
-
-  
     return(
       <div>
         <div className="testWord">
-          <h3>{this.state.word}</h3>
+          <h3>Word:</h3>
+          <p>{this.state.word}</p>
         </div>
-          <p>Select the correct answer!</p>
-        <div>
-          <h5>{definitions}</h5>
-        </div>
+          <h3>Select the correct answer!</h3>
+        <AnswerContainer
+          answers={this.state.herrings}
+          correct={this.state.definition}
+        />
       </div>
     )
   }

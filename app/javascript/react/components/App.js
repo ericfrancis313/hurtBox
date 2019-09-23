@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import Form from './Form'
-import QuestionContainer from './QuestionContainer'
+import VocabTest from './VocabTest'
 
 
 class App extends React.Component {
@@ -13,7 +13,7 @@ class App extends React.Component {
       <div className="box">
         <div className="text">
           <h1>VOCAB TEST</h1>
-          <QuestionContainer/>
+          <VocabTest/>
         </div>
       </div>
     )
