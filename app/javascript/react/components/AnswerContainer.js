@@ -20,7 +20,7 @@ class AnswerContainer extends Component{
       if (this.state.selectedId == correct){
         result = <p>Correct!</p>
       }else{
-          result = <p>Incorrect</p>
+          result = <p>Wrong!</p>
         }
     }
       let answers=this.props.answers.map((answer)=>{

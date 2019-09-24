@@ -41,9 +41,9 @@ class QuestionContainer extends Component{
       }
 
 
-      var shuffle = function (array) {
-        var currentIndex = array.length;
-        var temporaryValue, randomIndex;
+      let shuffle = function (array) {
+        let currentIndex = array.length;
+        let temporaryValue, randomIndex;
         while (0 !== currentIndex) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
@@ -57,7 +57,7 @@ class QuestionContainer extends Component{
       this.setState({
         word:vocabWord.word,
         definition:vocabWord.id,
-        herrings: this.state.herrings.concat(vocabList)
+        herrings: this.state.herrings.concat(shuffle(vocabList))
       })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
