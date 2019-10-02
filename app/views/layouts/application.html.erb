@@ -15,16 +15,23 @@
 <body>
   <div class="top-bar">
     <div class="top-bar-left">
-      <ul class="ul">
+      <div class="nav">
+        <div class="nav-right">
           <h1><a href="/">HurtBox</a></h1>
-          
+          <li> <%= link_to "games", games_path%> </li>
+          <li> <%= link_to "characters",characters_path %> </li>
+          <li> <%= link_to "vocabulary", vocabularies_path %> </li>
+        </div>
+
           <%- if current_user -%>
+
             <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <%- else -%>
             <li><%= link_to 'Sign Up', new_user_registration_path %></li>
             <li><%= link_to 'Sign In', new_user_session_path %></li>
+
           <%- end -%>
-        </ul>
+        </div>
 
 
     <%- flash.each do |key, value| -%>

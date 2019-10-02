@@ -1,21 +1,16 @@
 body{
-  background-image: url(http://i1.wp.com/shoryuken.com/wp-content/uploads/2016/06/mvc2_roster_750.jpg?fit=750%2C400&resize=750%2C400);
-  background-repeat: no-repeat;
+  background-image: url(http://i1.wp.com/shoryuken.com/wp-content/uploads/2016/06/mvc2_roster_750.jpg?fit=750%2C400&resize=750%2C400); */
+  background-repeat:;
   background-attachment: fixed;
   background-size: cover;
-  height: 100%
-
-
+  background-color: white
 }
 .box{
     background: #ffffff;
-    height: 100%;
+    background-position: top;
     opacity: 0.92;
-    position: fixed;
-    width: 80%;
-    left: 10%;
-    margin: auto;
     overflow: scroll;
+    height:100em
 }
 
 .hyperText{
@@ -29,34 +24,44 @@ body{
 
 .ryu{
   background-repeat: no-repeat;
-  background-position: 300px;
+  background-position: 400px;
 }
 
 
 .ryu:hover{
   background-image: url(https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/19/UP0102-BLUS30793_00-AVASS4AE8BITRYU0/1520463105000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000);
-  background-size: 2%;
+  background-size: 1em;
 }
 
 .ryu:active{
   background-image: url(https://res.cloudinary.com/teepublic/image/private/s--EZKI8EEE--/t_Preview/b_rgb:fffffe,c_limit,f_jpg,h_630,q_90,w_630/v1505692202/production/designs/1909217_1.jpg);
-  background-size: 5%;
+  background-size: 3em;
 }
 
 .selected{
   background-image: url(https://res.cloudinary.com/teepublic/image/private/s--EZKI8EEE--/t_Preview/b_rgb:fffffe,c_limit,f_jpg,h_630,q_90,w_630/v1505692202/production/designs/1909217_1.jpg);
   background-repeat: no-repeat;
-  background-size: 5%;
-  background-position: 300px;
+  background-size: 3em;
+  background-position: 400px;
 }
 
-ul {
+.nav{
   list-style-type: none;
   margin: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color:black;
   top: 0;
-  width: 100%;
+
+}
+
+.nav-right{
+  float:left;
+}
+
+.nav-right a{
+  color: white;
+  text-decoration: none;
+  padding: 14px
 }
 
 li {
