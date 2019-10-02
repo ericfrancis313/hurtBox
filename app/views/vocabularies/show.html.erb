@@ -3,5 +3,8 @@
     <h1><%= @vocabulary.word %></h1>
     <h3>definition:</h3>
       <%= @vocabulary.definition %>
+      <div class="ryu">
+        <p>  <%= link_to "Go Back", vocabularies_path %></p>
+      </div>
   </div>
 </div>

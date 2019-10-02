@@ -9,12 +9,14 @@ class QuestionContainer extends Component{
         definition:'',
         herrings:[],
         id:'',
-        selectedId:""
+        selectedId:"",
+        health:4
       }
 
       this.setSelectedId = this.setSelectedId.bind(this)
       this.resetTest = this.resetTest.bind(this)
-
+      this.handleHealth = this.handleHealth.bind(this)
+      this.handleClick = this.handleClick.bind(this)
   }
   componentDidMount(){
     fetch(`/api/v1/vocabularies`)
@@ -45,8 +47,6 @@ class QuestionContainer extends Component{
           vocabList.push(definitions)
         }
       }
-
-
       let shuffle = function (array) {
         let currentIndex = array.length;
         let temporaryValue, randomIndex;
@@ -70,15 +70,10 @@ class QuestionContainer extends Component{
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`));
   }
-
-
-
   setSelectedId(id){
     this.setState({selectedId:id})
   }
-
-
-  resetTest(event){
+  resetTest(){
     if (this.state.selectedId == this.state.id){
       this.setState({
         word:'',
@@ -115,8 +110,6 @@ class QuestionContainer extends Component{
             vocabList.push(definitions)
           }
         }
-
-
         let shuffle = function (array) {
           let currentIndex = array.length;
           let temporaryValue, randomIndex;
@@ -139,10 +132,19 @@ class QuestionContainer extends Component{
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
     }
+  }
+  handleHealth(){
+    if(this.state.selectedId !== this.state.id) {
+      this.setState({
+        health:this.state.health - 1
+      })
     }
+  }
 
-
-
+  handleClick(event){
+    this.handleHealth()
+    this.resetTest()
+  }
   render(){
     let result = <p></p>
     let correct = this.state.definition
@@ -165,7 +167,7 @@ class QuestionContainer extends Component{
         answer={definition.definition}
         className={className}
         handleClick={setSelectedId}
-        onClick={this.resetTest}
+
         />
     )
   })
@@ -177,7 +179,7 @@ class QuestionContainer extends Component{
       result = <p>Wrong!</p>
     }
   }
-  console.log(this.state.selectedId)
+  console.log(this.state.health)
     return(
       <div>
         <div className="testWord">
@@ -187,7 +189,7 @@ class QuestionContainer extends Component{
           <h3>Select the correct answer!</h3>
             {definitions}
             {result}
-            <button type="button" onClick={ this.resetTest}>
+            <button type="button" onClick={this.handleClick}>
               <span>Submit!</span>
             </button>
       </div>

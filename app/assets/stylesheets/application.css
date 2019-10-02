@@ -3,6 +3,8 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  height: 100%
+
 
 }
 .box{
@@ -13,7 +15,7 @@ body{
     width: 80%;
     left: 10%;
     margin: auto;
-
+    overflow: scroll;
 }
 
 .hyperText{
@@ -26,7 +28,50 @@ body{
 }
 
 .ryu{
-  background-image: url(https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/19/UP0102-BLUS30793_00-AVASS4AE8BITRYU0/1520463105000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000);
   background-repeat: no-repeat;
+  background-position: 300px;
+}
+
+
+.ryu:hover{
+  background-image: url(https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/19/UP0102-BLUS30793_00-AVASS4AE8BITRYU0/1520463105000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000);
   background-size: 2%;
+}
+
+.ryu:active{
+  background-image: url(https://res.cloudinary.com/teepublic/image/private/s--EZKI8EEE--/t_Preview/b_rgb:fffffe,c_limit,f_jpg,h_630,q_90,w_630/v1505692202/production/designs/1909217_1.jpg);
+  background-size: 5%;
+}
+
+.selected{
+  background-image: url(https://res.cloudinary.com/teepublic/image/private/s--EZKI8EEE--/t_Preview/b_rgb:fffffe,c_limit,f_jpg,h_630,q_90,w_630/v1505692202/production/designs/1909217_1.jpg);
+  background-repeat: no-repeat;
+  background-size: 5%;
+  background-position: 300px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden;
+  background-color: #333;
+  top: 0;
+  width: 100%;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
 }
