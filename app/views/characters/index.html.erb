@@ -1,9 +1,11 @@
 <div class="box">
   <% @characters.each do |character| %>
   <div class="text">
-    <p>
-      <%=link_to character.name, character_path(character)%>
-    </p>
+    <div class="ryu">
+      <p>
+        <%=link_to character.name, character_path(character)%>
+      </p>
+    </div>
   </div>
   <% end %>
 </div>
