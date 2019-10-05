@@ -22,16 +22,14 @@
           <li> <%= link_to "characters",characters_path %> </li>
           <li> <%= link_to "vocabulary", vocabularies_path %> </li>
         </div>
-
+        <div class="nav-left">
           <%- if current_user -%>
-
+            <li><%= link_to 'Profile', current_user%>
             <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
           <%- else -%>
             <li><%= link_to 'Sign Up', new_user_registration_path %></li>
             <li><%= link_to 'Sign In', new_user_session_path %></li>
-
           <%- end -%>
-        </div>
 
 
     <%- flash.each do |key, value| -%>
@@ -40,6 +38,8 @@
       </div>
     <%- end -%>
 
+  </div>
+</div>
     <%= yield %>
 
     <%= javascript_include_tag 'application' %>
