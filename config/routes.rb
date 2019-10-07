@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :games, only: [:index, :show, :new, :create]
   resources :users, only: [:index, :show, :new, :create]
   resources :characters, only: [:index, :show, :new, :create]
-  resources :vocabularies, only: [:index, :show]
+  resources :vocabularies, only: [:index, :show, :new, :create]
   resources :vocabtest, only: [:index]
 
 

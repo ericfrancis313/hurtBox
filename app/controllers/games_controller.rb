@@ -30,4 +30,10 @@ class GamesController < ApplicationController
   def game_params
     params.require(:game).permit(:name)
   end
+
+  def authorize_user
+    if !user_signed_in? || !current_user.admin?
+      raise ActionController::RoutingError.new("Not Found")
+    end
+  end
 end
