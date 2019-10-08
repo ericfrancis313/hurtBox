@@ -1,11 +1,15 @@
 <div class="box">
-  <div class="text">    
+  <div class="text">
     <h1>Add Word!</h1>
     <%= form_for(@vocabulary) do |f| %>
-      <%= f.label :word %><br />
+    <p>
+      <%= f.label :word %>
       <%= f.text_field :word %>
-      <%= f.label :definition %><br />
+    </p>
+    <p>
+      <%= f.label :definition %>
       <%= f.text_field :definition %>
+    </p>
     <%= f.submit "Submit Word" %>
     <% end %>
   </div>
