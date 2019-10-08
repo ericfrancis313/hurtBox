@@ -29,8 +29,7 @@ class VocabulariesController < ApplicationController
 
   private
   def vocabulary_params
-    params.require(:vocabulary).permit(:word)
-    params.require(:vocabulary).permit(:definition)
+    params.require(:vocabulary).permit(:word, :definition)
   end
 
   def authorize_user

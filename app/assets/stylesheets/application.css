@@ -46,29 +46,43 @@ body{
 }
 
 .nav{
+
   list-style-type: none;
   margin: 0;
   overflow: hidden;
   background-color:black;
   top: 0;
+  text-decoration: none;
 
 }
 
-.nav-right{
+.nav-left{
   float:left;
+}
+
+.nav-left a{
+  color: white;
+  text-decoration: none;
+  padding: 14px;
+}
+
+.nav-right{
+  float:right;
 }
 
 .nav-right a{
   color: white;
   text-decoration: none;
-  padding: 14px
+  padding: 14px 16px;
 }
+
 
 li {
   float: right;
 }
 
 li a {
+  vertical-align: text-bottom;
   display: block;
   color: white;
   text-align: center;
