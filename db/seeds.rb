@@ -12,3 +12,9 @@ require 'faker'
     definition:Faker::JapaneseMedia::DragonBall.character
   )
 end
+
+admin = User.create!(
+  email: "fakeadmin@happypath.com",
+  password: "password",
+  admin: true
+)

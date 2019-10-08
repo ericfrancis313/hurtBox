@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
 
-  validates :user_name, presence:true, length: {minimum:8}
   
+
 end
