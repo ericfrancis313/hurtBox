@@ -1,17 +1,19 @@
 <div class="box">
   <div class="text">
     <% @vocabularies.each do |vocabulary| %>
-      <div class='ryu'>
-        <p>
-          <%=link_to vocabulary.word, vocabulary_path(vocabulary)%>
-        </p>
-      </div>
-        <% end %>
-      <div class="ryu">
-        <p>  <%= link_to "vocab test", vocabtest_index_path %></p>
-      </div>
-      <div class="ryu">
-        <%= link_to "Add Word!", new_vocabulary_path %>
+      <div class='removelinkdefault'>
+        <div class='ryu'>
+          <p>
+            <%=link_to vocabulary.word, vocabulary_path(vocabulary)%>
+          </p>
+        </div>
+          <% end %>
+        <div class="ryu">
+          <p>  <%= link_to "vocab test", vocabtest_index_path %></p>
+        </div>
+        <div class="ryu">
+          <%= link_to "Add Word!", new_vocabulary_path %>
+        </div>
       </div>
   </div>
 </div>

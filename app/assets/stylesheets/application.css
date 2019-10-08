@@ -13,24 +13,36 @@ body{
     height:100em
 }
 
-.hyperText{
-  color: inherit;
-  text-decoration: inherit;
+.removelinkdefault {
+    color: black;
+    text-decoration: none;
+}
+
+
+.removelinkdefault a {
+    color: black;
+    text-decoration: none;
+
 }
 
 .text{
   text-align: center;
 }
+.text :visited {
+    color: black;
+}
 
 .ryu{
   background-repeat: no-repeat;
   background-position: 400px;
+
 }
 
 
 .ryu:hover{
   background-image: url(https://store.playstation.com/store/api/chihiro/00_09_000/container/US/en/19/UP0102-BLUS30793_00-AVASS4AE8BITRYU0/1520463105000/image?w=240&h=240&bg_color=000000&opacity=100&_version=00_09_000);
   background-size: 1em;
+  text-decoration: underline;
 }
 
 .ryu:active{
@@ -46,14 +58,12 @@ body{
 }
 
 .nav{
-
   list-style-type: none;
   margin: 0;
   overflow: hidden;
   background-color:black;
   top: 0;
   text-decoration: none;
-
 }
 
 .nav-left{
