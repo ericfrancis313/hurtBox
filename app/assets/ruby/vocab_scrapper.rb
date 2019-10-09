@@ -2,13 +2,13 @@ require 'nokogiri'
 require 'open-uri'
 require 'rubygems'
 
-wordsArray = []
-definitionsArray = []
 url = 'https://en.wiktionary.org/wiki/Appendix:Glossary_of_fighting_games'
 data = Nokogiri::HTML(open(url))
 words = data.css('.mw-headline')
 definitions = data.css('.mw-body-content p')
 
+wordsArray = []
+definitionsArray = []
 
 words.each do |word|
     wordsArray.push(word.text)
@@ -21,20 +21,18 @@ end
 definitionsArray.delete(definitionsArray.first)
 
 
-
 definitionsArray.each do |definition|
   if definition.include?('See:') === true
     definitionsArray.delete(definition)
   end
 end
 
-completeArray = Hash[wordsArray.zip definitionsArray]
+h = Hash[wordsArray.zip definitionsArray]
 
-completeArray.each do |key,value|
-  unless value.nil?
-      Vocabulary.create!(
-          word: key,
-          definition: value
-      )
-   end
+
+h.each do |key,value|
+  Vocabulary.create!(
+    Word: key,
+    Definition: value
+  )
 end
