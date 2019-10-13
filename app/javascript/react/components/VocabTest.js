@@ -1,4 +1,5 @@
 import React,{Component} from 'react'
+
 import Answers from '../constants/Answers'
 
 class QuestionContainer extends Component{
@@ -74,7 +75,6 @@ class QuestionContainer extends Component{
     this.setState({selectedId:id})
   }
   resetTest(){
-    if (this.state.selectedId == this.state.id){
       this.setState({
         word:'',
         definition:'',
@@ -131,7 +131,12 @@ class QuestionContainer extends Component{
         })
       })
       .catch(error => console.error(`Error in fetch: ${error.message}`));
-    }
+
+      if(this.state.health <= 0){
+        this.setState({
+          health:4
+        })
+      }
   }
   handleHealth(){
     if(this.state.selectedId !== this.state.id) {
@@ -146,6 +151,7 @@ class QuestionContainer extends Component{
     this.resetTest()
   }
   render(){
+    let loss = <p></p>
     let result = <p></p>
     let correct = this.state.definition
     console.log(correct)
@@ -161,16 +167,23 @@ class QuestionContainer extends Component{
       className=""
     }
     return(
+      <div className="definitions">
         <Answers
         key={definition.id}
         id={definition.id}
         answer={definition.definition}
         className={className}
         handleClick={setSelectedId}
-
         />
+      </div>
     )
   })
+  let words = this.state.word
+  let text = <h3>Select the correct answer!</h3>
+  let button =
+  <button type="button" onClick={this.handleClick}>
+    <span>Submit!</span>
+  </button>
 
   if(this.state.selectedId !== ""){
     if (this.state.selectedId == this.state.id){
@@ -179,19 +192,27 @@ class QuestionContainer extends Component{
       result = <p>Wrong!</p>
     }
   }
-  console.log(this.state.health)
+
+  if(this.state.health <= 0){
+    text = ""
+    words = ""
+    definitions = <p>YOU LOSE!</p>
+    button =
+    <button type="button" onClick={this.handleClick}>
+      <span>Try Again?</span>
+    </button>
+
+  }
     return(
       <div>
         <div className="testWord">
-          <h3>Word:</h3>
-            <p>{this.state.word}</p>
-        </div>
-          <h3>Select the correct answer!</h3>
-            {definitions}
-            {result}
-            <button type="button" onClick={this.handleClick}>
-              <span>Submit!</span>
-            </button>
+        <p>Health: {this.state.health}</p>
+          {words}
+          </div>
+            {text}
+              {definitions}
+              {result}
+              {button}
       </div>
     )
 

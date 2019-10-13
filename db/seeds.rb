@@ -38,3 +38,10 @@ completeArray.each do |key,value|
       )
    end
 end
+
+admin = User.create!(
+  user_name: "fakeadmin",
+  email: "fakeadmin@happypath.com",
+  password: "password",
+  admin: true
+)
