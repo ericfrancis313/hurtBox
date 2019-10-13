@@ -20,7 +20,6 @@ end
 
 definitionsArray.delete(definitionsArray.first)
 
-
 definitionsArray.each do |definition|
   if definition.include?('See:') === true
     definitionsArray.delete(definition)
@@ -28,7 +27,6 @@ definitionsArray.each do |definition|
 end
 
 h = Hash[wordsArray.zip definitionsArray]
-
 
 h.each do |key,value|
   Vocabulary.create!(

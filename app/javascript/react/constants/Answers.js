@@ -4,7 +4,7 @@ import React from 'react'
 const Answers = (props) => {
 
   return (
-  <div className="ryu">
+  <div className="definitions">
     <div id={props.Id} className={props.className} onClick={props.handleClick} >
       {props.answer}
     </div>

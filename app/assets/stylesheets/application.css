@@ -51,10 +51,7 @@ body{
 }
 
 .selected{
-  background-image: url(https://res.cloudinary.com/teepublic/image/private/s--EZKI8EEE--/t_Preview/b_rgb:fffffe,c_limit,f_jpg,h_630,q_90,w_630/v1505692202/production/designs/1909217_1.jpg);
-  background-repeat: no-repeat;
-  background-size: 3em;
-  background-position: 400px;
+ text-decoration: underline;
 }
 
 .nav{
@@ -103,4 +100,12 @@ li a {
 /* Change the link color to #111 (black) on hover */
 li a:hover {
   background-color: grey;
+}
+
+.definitions{
+  padding-bottom: 25px;
+}
+
+.definitions :hover{
+  text-decoration: underline;
 }
