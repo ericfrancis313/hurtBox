@@ -1,14 +1,13 @@
 body{
-  background-image: url(http://i1.wp.com/shoryuken.com/wp-content/uploads/2016/06/mvc2_roster_750.jpg?fit=750%2C400&resize=750%2C400); */
+  background-color: black;
   background-repeat:;
   background-attachment: fixed;
   background-size: cover;
-  background-color: white
 }
 .box{
     background: #ffffff;
     background-position: top;
-    opacity: 0.92;
+    opacity: 0.9;
     overflow: scroll;
     height:100em
 }
