@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'homes#index'
+  root 'vocabularies#index'
   devise_for :users
 
   resources :games, only: [:index, :show, :new, :create]

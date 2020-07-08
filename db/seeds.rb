@@ -1,23 +1,27 @@
+
 require 'nokogiri'
 require 'open-uri'
 require 'rubygems'
 
 wordsArray = []
 definitionsArray = []
-url = 'https://en.wiktionary.org/wiki/Appendix:Glossary_of_fighting_games'
+url = 'https://dotesports.com/general/news/fighting-games-glossary-2106'
 data = Nokogiri::HTML(open(url))
-words = data.css('.mw-headline')
-definitions = data.css('.mw-body-content p')
-
+words = data.css('h2')
+definitions = data.css('p')
 words.each do |word|
     wordsArray.push(word.text)
+
 end
 
 definitions.each do |definition|
     definitionsArray.push(definition.text)
+    
 end
 
-definitionsArray.delete(definitionsArray.first)
+4.times do
+  definitionsArray.delete(definitionsArray.first)
+end
 
 definitionsArray.each do |definition|
   if definition.include?('See:') === true

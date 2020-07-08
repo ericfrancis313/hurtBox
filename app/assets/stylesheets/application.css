@@ -1,17 +1,19 @@
 body{
-  background-color: black;
-  background-repeat:;
+
   background-attachment: fixed;
   background-size: cover;
+
 }
 .box{
     background: #ffffff;
     background-position: top;
     opacity: 0.9;
-    overflow: scroll;
-    height:100em
-}
 
+
+}
+.login{
+  text-align: center;
+}
 .removelinkdefault {
     color: black;
     text-decoration: none;
