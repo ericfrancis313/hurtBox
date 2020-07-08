@@ -211,7 +211,6 @@ class QuestionContainer extends Component{
           </div>
             {text}
               {definitions}
-              {result}
               {button}
       </div>
     )

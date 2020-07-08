@@ -2,7 +2,7 @@
 <html>
 <head>
 
-  <title>HurtBox</title>
+  <title>Fighting Game Dictionary</title>
   <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -16,11 +16,11 @@
   <div class="top-bar">
     <div class="top-bar-left">
       <div class="nav">
-        <div class="nav-left">
-          <h1><a href="/">HurtBox</a></h1>
-          <li> <%= link_to "games", games_path%> </li>
-          <li> <%= link_to "characters",characters_path %> </li>
-          <li> <%= link_to "vocabulary", vocabularies_path %> </li>
+          <div class="home">
+          <h1><a href="/">Fighting Game Dictionary</a></h1>
+          </div>
+          <div class="nav-left">
+          <li> <%= link_to "Home", vocabularies_path %> </li>
         </div>
         <div class="nav-right">
           <%- if current_user && current_user.admin? -%>
@@ -28,8 +28,8 @@
         <% end  %>
           <%- if current_user -%>
             <li><%= link_to 'Profile', current_user%></li>
-            <li><%= link_to "vocab test", vocabtest_index_path %></li>
             <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+            <li><%= link_to "Test Your Might", vocabtest_index_path %></li>
           <%- else -%>
             <li><%= link_to 'Sign Up', new_user_registration_path %></li>
             <li><%= link_to 'Sign In', new_user_session_path %></li>
