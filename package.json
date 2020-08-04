@@ -30,6 +30,7 @@
   },
   "scripts": {
     "start": "./bin/webpack-dev-server",
+     "start": "node index.js",
     "test": "node_modules/.bin/karma start karma.conf.js"
   }
 }
