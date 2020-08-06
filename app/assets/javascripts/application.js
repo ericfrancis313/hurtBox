@@ -15,4 +15,5 @@
 //= require foundation
 //= require_tree .
 
+var PORT = process.env.Port
 $(function(){ $(document).foundation(); });
