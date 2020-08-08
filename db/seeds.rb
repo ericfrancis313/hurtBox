@@ -16,10 +16,9 @@ end
 
 definitions.each do |definition|
     definitionsArray.push(definition.text)
-    
 end
-
-4.times do
+binding.pry
+5.times do
   definitionsArray.delete(definitionsArray.first)
 end
 
@@ -39,6 +38,7 @@ completeArray.each do |key,value|
       )
    end
 end
+binding.pry
 
 admin = User.create!(
   user_name: "fakeadmin",
