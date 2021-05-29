@@ -18,4 +18,4 @@
 //var PORT = process.env.Port
 //$(function(){ $(document).foundation(); });
 
-.listen(process.env.PORT || 3000)
+web.listen(process.env.PORT || 3000)
